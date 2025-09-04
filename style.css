@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: 'Segoe UI', cursive;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  color: #00cfff;
+  font-family: 'Brush Script MT', cursive;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.lines .diagonal {
+  position: absolute;
+  width: 200%;
+  height: 30px;
+  background-color: #4ee6eb;
+  top: 0;
+}
+
+.diagonal.left {
+  transform: rotate(47deg);
+  left: -47%;
+  top: 0;
+}
+
+.diagonal.right {
+  transform: rotate(-47deg);
+  right: -45%;
+  top: 0;
+}
+
+.short-line {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  background-color: #4ee6eb;
+}
+
+.short-line.left {
+  transform: rotate(494deg);
+  bottom: 25%;
+  left: -40px;
+}
+
+.short-line.right {
+  transform: rotate(-493deg);
+  bottom: 25%;
+  right: -40px;
+}
+
+/* 📱 Responsive ปรับสำหรับ Tablet */
+@media (max-width: 992px) {
+  .title {
+    font-size: 70px;
+  }
+
+  .lines .diagonal {
+    height: 20px;
+  }
+
+  .short-line {
+    width: 120px;
+    height: 15px;
+  }
+}
+
+/* 📱 Responsive ปรับสำหรับ Mobile */
+@media (max-width: 576px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .lines .diagonal {
+    height: 15px;
+  }
+
+  .short-line {
+    width: 90px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Itim', cursive;
+  background: linear-gradient(to right, #80c6ff, #a3d3ff);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+.card {
+  text-align: center;
+  max-width: 300px;
+  flex: 1 1 250px; /* ยืดหยุ่นได้ */
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.text {
+  font-size: 22px;
+  color: #7b4de2;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* ข้อความมุมซ้ายล่าง */
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.footer button {
+  background-color: #b77eff;
+  color: white;
+  font-size: 20px;
+  font-family: 'Itim', cursive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.footer button:hover {
+  background-color: #9c5de0;
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .card img {
+    width: 250px;
+    height: 250px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .footer button {
+    font-size: 18px;
+    padding: 8px 18px;
+  }
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+  .text {
+    font-size: 18px;
+  }
+  .footer button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* จอเล็กมาก (เช่น iPhone SE) */
+@media (max-width: 480px) {
+  .card img {
+    width: 160px;
+    height: 160px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .footer button {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}
